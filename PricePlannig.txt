@@ -1,0 +1,91 @@
+🏗️ Advance ToDo SaaS – Plans & Feature Division
+
+
+1️⃣ Free Plan (Entry / Personal Users)
+👉 Goal: Individual ya small teams ko attract karna.
+
+Features:
+✅ Task management (create, edit, delete)
+✅ Subtasks, labels, deadlines
+✅ Kanban board (basic)
+✅ Calendar (basic, no sync)
+✅ 1 Workspace (1 company/tenant)
+✅ Max 5 members
+✅ Max 100 tasks per month
+✅ Email notifications (limited)
+✅ AI Suggestion (Lite – task title auto improve)
+
+
+2️⃣ Premium Plan (Starter – Small Companies)
+👉 Goal: Small startups, teams up to 20–30 members.
+
+Includes Free Plan + Extra:
+🔑 Unlimited tasks & projects
+🔑 Up to 3 Workspaces (multiple companies possible)
+🔑 Role-based access (Employee, Manager, Client)
+🔑 Google Calendar / Outlook Sync
+🔑 File uploads (up to 2GB / workspace)
+🔑 Advanced notifications (Push + Email unlimited)
+🔑 Client collaboration (restricted access)
+🔑 AI Assistant (task summarization + smart suggestions)
+🔑 Reports (basic)
+💰 Pricing Idea: $9–15 per user / month
+
+
+3️⃣ Business Plan (Growth – Mid-Level Companies)
+👉 Goal: Companies with multiple departments (50–200 employees).
+
+Includes Starter +
+⚡ Unlimited Workspaces
+⚡ Custom Branding (Logo, Theme per company)
+⚡ Department-level roles (HR, Finance, Tech, Marketing)
+⚡ Advanced Analytics (employee productivity, overdue tasks)
+⚡ File uploads (up to 100GB total)
+⚡ Integrations (Slack, MS Teams, WhatsApp)
+⚡ AI Co-Pilot (natural language → task create, smart task assignment)
+⚡ Export (CSV, PDF Reports)
+⚡ Audit Logs (security compliance)
+⚡ SSO (Google/Microsoft login)
+💰 Pricing Idea: $25–35 per user / month
+
+
+4️⃣ Enterprise Plan (Custom – Large Organizations)
+👉 Goal: Enterprises, 200+ employees.
+
+Includes Business +
+🚀 Unlimited storage
+🚀 Dedicated Account Manager
+🚀 Custom Integrations (ERP, CRM, Payroll)
+🚀 On-premise deployment (if required)
+🚀 API Access + Webhooks
+🚀 SLA, Priority Support
+🚀 AI Advanced Features (auto project planning, resource allocation)
+💰 Pricing Idea: Custom (starts $50+ per user / month)
+
+
+⚡ Tech Division According to Plan
+| Feature                        | Free  | Starter | Business  | Enterprise |
+| ------------------------------ | ----- | ------- | --------- | ---------- |
+| Basic Tasks, Subtasks          | ✅    | ✅       | ✅      | ✅          |
+| Kanban Board                   | ✅    | ✅       | ✅      | ✅          |
+| Calendar (Basic)               | ✅    | ✅       | ✅      | ✅          |
+| Calendar Sync (Google/Outlook) | ❌    | ✅       | ✅      | ✅          |
+| Workspaces                     | 1     | 3       | Unlimited | Unlimited  |
+| Members Limit                  | 5     | 30      | 200       | Unlimited  |
+| File Uploads                   | ❌    | 2GB     | 100GB     | Unlimited  |
+| AI Task Suggestions            | Lite  | Basic   | Co-Pilot  | Advanced   |
+| Reports / Analytics            | ❌    | Basic   | Advanced  | Enterprise |
+| Branding                       | ❌    | ❌       | ✅      | ✅          |
+| Integrations (Slack/Teams/etc) | ❌    | ❌       | ✅      | ✅          |
+| API & Webhooks                 | ❌    | ❌       | ❌      | ✅          |
+| SSO (Google/Microsoft)         | ❌    | ❌       | ✅      | ✅          |
+| Audit Logs                     | ❌    | ❌       | ✅      | ✅          |
+| Custom Support                 | ❌    | ❌       | ❌      | ✅          |
+
+
+💡 Monetization & Scaling Flow
+Free plan → individual attraction (viral growth, no credit card required).
+Starter plan → small startups upgrade (low price, per user billing).
+Business plan → growing teams (mid-level SaaS sweet spot).
+Enterprise plan → custom pricing, high profits, SLA contracts.
+
