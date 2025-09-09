@@ -1,0 +1,53 @@
+1. Landing Page (Home)
+
+Sections:
+Hero Section → Big tagline, product value + “Get Started Free” button.
+Features Highlights → 3–4 cards (Task mgmt, Teamwork, AI, Security).
+Screenshots / Demo → App ka preview (GIFs/Images).
+Why Choose Us → USP (secure, scalable, AI-powered).
+Testimonials (optional) → Future me add kar sakte ho.
+Final CTA → Signup/Free Trial button again.
+👉 Purpose: First impression → user ko turant samajh aaye product kya karta hai aur kyun useful hai.
+
+2. About Page
+
+Sections:
+Company Vision & Mission → Hum kya solve kar rahe hain.
+Story → Problem → Solution journey (kyu banaya).
+Team (optional) → Founders ka short intro.
+👉 Purpose: Trust build karna + product ki credibility dikhana.
+
+3. Pricing Page
+Sections:
+Pricing Plans Grid → Free, Starter, Business, Enterprise.
+Features Comparison Table → Kis plan me kya milega.
+FAQ → Billing, upgrade/downgrade, refund policy (short).
+Call to Action → “Choose Plan” buttons.
+👉 Purpose: Clear kare ki kaun sa plan kis ke liye hai, conversion ke liye.
+
+4. Features Page
+
+Sections:
+Overview Section → Short line “Everything you need for productivity”.
+Task Management → Create/Edit/Delete, Kanban.
+Team Collaboration → Roles, projects, file sharing.
+AI Power → Smart task suggestions, summaries.
+Security → Role-based access, audit logs, encryption.
+👉 Purpose: Detailed explanation of features → enterprise users ko impress karega.
+
+5. Contact / Support Page
+
+Sections:
+Contact Form → Name, Email, Message.
+Support Info → Email (support@denytrix.com).
+Links → Docs/Help/Community (future).
+👉 Purpose: Easy way for users to reach out, doubt solve karna.
+
+6. Auth Pages (Public)
+
+Pages:
+Login Page → Email/Google login.
+Signup Page → Basic form + plan selection (optional).
+Forgot Password → Email reset form.
+👉 Purpose: Smooth entry point → easy onboarding.
+

@@ -1,3 +1,40 @@
+🌐 Public Website (Before Phase 1 MVP)
+👉 Ye hi aapka marketing + information hub hoga jisme log aake product dekhenge, plans samjhenge aur signup karenge.
+
+PAGES:
+1. Landing Page (Home)
+  -> Hero section → tagline + CTA button (“Get Started Free”)
+  -> Product highlights (task management, team collaboration, AI power etc.)
+  -> Screenshots/demo GIFs of app
+  -> Why choose us (3–4 points like secure, scalable, AI-ready)
+  -> Call to Action (Sign Up / Try Free)
+
+2. About Page
+  -> Company vision/mission
+  -> Founders / Team (optional for now)
+  -> Why we’re building this (problem → solution story)
+
+3. Pricing Page
+  -> Free Plan (individual users)
+  -> Starter Plan (small startup)
+  -> Business Plan (teams 10–200)
+  -> Enterprise (custom pricing, contact sales)
+  -> Features comparison table
+
+4. Features Page (optional but useful)
+  -> Core features explained with screenshots/illustrations
+  -> Divided by category → Task Management, Team Collaboration, AI, Security
+
+5. Contact / Support Page
+  -> Contact form (email support@yourdomain.com)
+  -> Links to docs/help (future me knowledge base + FAQ add kar sakte ho)
+
+6. Auth Pages (public)
+  -> Login
+  -> Signup
+  -> Forgot password
+
+
 🟢 PHASE 1 → Basic ToDo (MVP / Version 1)
 
 👉 Goal: Working demo product, investors/team ko dikhane layak.
