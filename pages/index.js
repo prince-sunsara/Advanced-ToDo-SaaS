@@ -1,5 +1,5 @@
-import { useState, useEffect, useRef } from "react";
-import { motion, useInView, useAnimation } from "framer-motion";
+import { AnimatedSection } from "@/components/animations/sectionAnimation";
+import { motion } from "framer-motion";
 import Link from "next/link";
 
 // Icons (using simple SVGs for production-ready code)
@@ -41,38 +41,6 @@ const PlayIcon = () => (
   </svg>
 );
 
-const MenuIcon = () => (
-  <svg
-    className="w-6 h-6"
-    fill="none"
-    stroke="currentColor"
-    viewBox="0 0 24 24"
-  >
-    <path
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      strokeWidth={2}
-      d="M4 6h16M4 12h16M4 18h16"
-    />
-  </svg>
-);
-
-const XIcon = () => (
-  <svg
-    className="w-6 h-6"
-    fill="none"
-    stroke="currentColor"
-    viewBox="0 0 24 24"
-  >
-    <path
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      strokeWidth={2}
-      d="M6 18L18 6M6 6l12 12"
-    />
-  </svg>
-);
-
 // Feature icons
 const TaskIcon = () => (
   <svg
@@ -90,54 +58,6 @@ const TaskIcon = () => (
   </svg>
 );
 
-const UsersIcon = () => (
-  <svg
-    className="w-8 h-8"
-    fill="none"
-    stroke="currentColor"
-    viewBox="0 0 24 24"
-  >
-    <path
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      strokeWidth={2}
-      d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197m13.5-9a2.5 2.5 0 11-5 0 2.5 2.5 0 015 0z"
-    />
-  </svg>
-);
-
-const CalendarIcon = () => (
-  <svg
-    className="w-8 h-8"
-    fill="none"
-    stroke="currentColor"
-    viewBox="0 0 24 24"
-  >
-    <path
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      strokeWidth={2}
-      d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
-    />
-  </svg>
-);
-
-const ChatIcon = () => (
-  <svg
-    className="w-8 h-8"
-    fill="none"
-    stroke="currentColor"
-    viewBox="0 0 24 24"
-  >
-    <path
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      strokeWidth={2}
-      d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"
-    />
-  </svg>
-);
-
 const ChartIcon = () => (
   <svg
     className="w-8 h-8"
@@ -150,22 +70,6 @@ const ChartIcon = () => (
       strokeLinejoin="round"
       strokeWidth={2}
       d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"
-    />
-  </svg>
-);
-
-const BellIcon = () => (
-  <svg
-    className="w-8 h-8"
-    fill="none"
-    stroke="currentColor"
-    viewBox="0 0 24 24"
-  >
-    <path
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      strokeWidth={2}
-      d="M15 17h5l-3.5-3.5a50.6 50.6 0 00-1.5 3.5zm-6 0H4l3.5-3.5c.5-1.2 1-2.3 1.5-3.5z"
     />
   </svg>
 );
@@ -224,40 +128,7 @@ const StarIcon = () => (
   </svg>
 );
 
-const AnimatedSection = ({ children, className = "", delay = 0 }) => {
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: "-100px" });
-  const controls = useAnimation();
-
-  useEffect(() => {
-    if (isInView) {
-      controls.start("visible");
-    }
-  }, [isInView, controls]);
-
-  return (
-    <motion.div
-      ref={ref}
-      animate={controls}
-      initial="hidden"
-      variants={{
-        hidden: { opacity: 0, y: 50 },
-        visible: {
-          opacity: 1,
-          y: 0,
-          transition: { duration: 0.6, delay, ease: "easeOut" },
-        },
-      }}
-      className={className}
-    >
-      {children}
-    </motion.div>
-  );
-};
-
 export default function LandingPage() {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-
   const features = [
     {
       icon: <TaskIcon />,
@@ -361,81 +232,6 @@ export default function LandingPage() {
   return (
     <>
       <div className="min-h-screen relative overflow-hidden">
-        {/* Navigation */}
-        <nav className="glass-nav fixed top-4 left-4 right-4 z-50">
-          <div className="flex items-center justify-between">
-            <div className="flex items-center space-x-3">
-              <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-purple-600 to-blue-600 flex items-center justify-center glow">
-                <TaskIcon />
-              </div>
-              <span className="text-xl font-bold text-gradient">
-                TaskFlow Pro
-              </span>
-            </div>
-
-            {/* Desktop Navigation */}
-            <div className="hidden lg:flex items-center space-x-8">
-              <Link href="#features" className="nav-link">
-                Features
-              </Link>
-              <Link href="/pricing" className="nav-link">
-                Pricing
-              </Link>
-              <Link href="/about" className="nav-link">
-                About
-              </Link>
-              <Link href="/contact" className="nav-link">
-                Contact
-              </Link>
-            </div>
-
-            <div className="flex items-center space-x-4">
-              <Link href="/login" className="hidden sm:block nav-link">
-                Sign In
-              </Link>
-              <Link href="/signup" className="btn-primary">
-                <span>Get Started Free</span>
-              </Link>
-
-              {/* Mobile Menu Button */}
-              <button
-                className="btn-Menu flex lg:hidden"
-                onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              >
-                {mobileMenuOpen ? <XIcon /> : <MenuIcon />}
-              </button>
-            </div>
-          </div>
-
-          {/* Mobile Menu */}
-          {mobileMenuOpen && (
-            <motion.div
-              initial={{ opacity: 0, height: 0 }}
-              animate={{ opacity: 1, height: "auto" }}
-              exit={{ opacity: 0, height: 0 }}
-              className="lg:hidden mt-4 pt-4 border-t border-white/10"
-            >
-              <div className="flex flex-col space-y-2">
-                <Link href="#features" className="nav-link">
-                  Features
-                </Link>
-                <Link href="/pricing" className="nav-link">
-                  Pricing
-                </Link>
-                <Link href="/about" className="nav-link">
-                  About
-                </Link>
-                <Link href="/contact" className="nav-link">
-                  Contact
-                </Link>
-                <Link href="/login" className="nav-link">
-                  Sign In
-                </Link>
-              </div>
-            </motion.div>
-          )}
-        </nav>
-
         {/* Hero Section */}
         <section className="section-hero bg-animated-mesh">
           <div className="container mx-auto px-6 relative z-10">
@@ -1030,160 +826,6 @@ export default function LandingPage() {
             </AnimatedSection>
           </div>
         </section>
-
-        {/* Footer */}
-        <footer className="border-t border-white/10 my-20">
-          <div className="container mx-auto px-6 py-16">
-            <div className="grid md:grid-cols-5 gap-8 mb-8">
-              <div className="md:col-span-2">
-                <div className="flex items-center space-x-3 mb-4">
-                  <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-purple-600 to-blue-600 flex items-center justify-center glow">
-                    <TaskIcon />
-                  </div>
-                  <span className="text-xl font-bold text-gradient">
-                    TaskFlow Pro
-                  </span>
-                </div>
-                <p className="text-gray-400 mb-6 max-w-md">
-                  The most powerful task management platform for modern teams.
-                  Transform your productivity with AI-powered automation.
-                </p>
-
-                {/* Social Media */}
-                <div className="flex space-x-4">
-                  {["Twitter", "LinkedIn", "GitHub", "Discord"].map(
-                    (social) => (
-                      <a
-                        key={social}
-                        href="#"
-                        className="w-20 h-10 m-2 rounded bg-white/5 hover:bg-white/10 flex items-center justify-center transition-colors"
-                      >
-                        <span className="text-sm">{social}</span>
-                      </a>
-                    )
-                  )}
-                </div>
-              </div>
-              <div>
-                <h4 className="font-semibold mb-4">Product</h4>
-                <div className="space-y-3">
-                  <Link
-                    href="/features"
-                    className="block text-gray-400 hover:text-white transition-colors"
-                  >
-                    Features
-                  </Link>
-                  <Link
-                    href="/pricing"
-                    className="block text-gray-400 hover:text-white transition-colors"
-                  >
-                    Pricing
-                  </Link>
-                  <Link
-                    href="/integrations"
-                    className="block text-gray-400 hover:text-white transition-colors"
-                  >
-                    Integrations
-                  </Link>
-                  <Link
-                    href="/changelog"
-                    className="block text-gray-400 hover:text-white transition-colors"
-                  >
-                    Changelog
-                  </Link>
-                </div>
-              </div>
-
-              <div>
-                <h4 className="font-semibold mb-4">Company</h4>
-                <div className="space-y-3">
-                  <Link
-                    href="/about"
-                    className="block text-gray-400 hover:text-white transition-colors"
-                  >
-                    About
-                  </Link>
-                  <Link
-                    href="/careers"
-                    className="block text-gray-400 hover:text-white transition-colors"
-                  >
-                    Careers
-                  </Link>
-                  <Link
-                    href="/blog"
-                    className="block text-gray-400 hover:text-white transition-colors"
-                  >
-                    Blog
-                  </Link>
-                  <Link
-                    href="/contact"
-                    className="block text-gray-400 hover:text-white transition-colors"
-                  >
-                    Contact
-                  </Link>
-                </div>
-              </div>
-
-              <div>
-                <h4 className="font-semibold mb-4">Support</h4>
-                <div className="space-y-3">
-                  <Link
-                    href="/help"
-                    className="block text-gray-400 hover:text-white transition-colors"
-                  >
-                    Help Center
-                  </Link>
-                  <Link
-                    href="/docs"
-                    className="block text-gray-400 hover:text-white transition-colors"
-                  >
-                    Documentation
-                  </Link>
-                  <Link
-                    href="/status"
-                    className="block text-gray-400 hover:text-white transition-colors"
-                  >
-                    Status
-                  </Link>
-                  <Link
-                    href="/security"
-                    className="block text-gray-400 hover:text-white transition-colors"
-                  >
-                    Security
-                  </Link>
-                </div>
-              </div>
-            </div>
-
-            <div className="border-t border-white/10 pt-8">
-              <div className="flex flex-col md:flex-row justify-between items-center">
-                <p className="text-gray-400 text-sm mb-4 md:mb-0">
-                  © 2024 TaskFlow Pro. All rights reserved.
-                </p>
-                <div className="flex items-center space-x-6">
-                  <Link
-                    href="/privacy"
-                    className="text-gray-400 hover:text-white text-sm transition-colors"
-                  >
-                    Privacy Policy
-                  </Link>
-                  <Link
-                    href="/terms"
-                    className="text-gray-400 hover:text-white text-sm transition-colors"
-                  >
-                    Terms of Service
-                  </Link>
-                  <Link
-                    href="/cookies"
-                    className="text-gray-400 hover:text-white text-sm transition-colors"
-                  >
-                    Cookie Policy
-                  </Link>
-                </div>
-              </div>
-            </div>
-          </div>
-        </footer>
       </div>
     </>
   );

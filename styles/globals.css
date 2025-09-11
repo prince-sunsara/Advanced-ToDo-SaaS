@@ -294,6 +294,7 @@ body::before {
   background: linear-gradient(135deg, #9333ea, #3b82f6);
   opacity: 0;
   transition: opacity 0.3s ease;
+  z-index: -1;
 }
 
 .btn-primary:hover::before {
